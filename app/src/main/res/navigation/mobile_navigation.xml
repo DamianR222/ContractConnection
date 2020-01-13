@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.roberts222.damian.contractconnection.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tools"
+            app:destination="@id/nav_tools" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_share"
+            app:destination="@id/nav_share" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_send"
+            app:destination="@id/nav_send" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.roberts222.damian.contractconnection.ui.gallery.GalleryFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.roberts222.damian.contractconnection.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_contracts"
+        tools:layout="@layout/fragment_contracts" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.roberts222.damian.contractconnection.ui.tools.ToolsFragment"
+        android:label="@string/menu_services"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.roberts222.damian.contractconnection.ui.share.ShareFragment"
+        android:label="@string/menu_money_services"
+        tools:layout="@layout/fragment_moneyservices" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.roberts222.damian.contractconnection.ui.send.SendFragment"
+        android:label="@string/menu_contact_us"
+        tools:layout="@layout/fragment_contact" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.roberts222.damian.contractconnection.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.roberts222.damian.contractconnection.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>
